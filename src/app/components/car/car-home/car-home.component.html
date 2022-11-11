@@ -1,0 +1,5 @@
+<ul *ngIf="cars">
+  <li *ngFor="let car of cars">
+    {{ car.make }} - {{ car.model }} - {{ car.hp }} - {{ car.imageUrl }}
+  </li>
+</ul>
