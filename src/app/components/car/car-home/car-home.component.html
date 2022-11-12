@@ -1,5 +1,28 @@
-<ul *ngIf="cars">
-  <li *ngFor="let car of cars">
-    {{ car.make }} - {{ car.model }} - {{ car.hp }} - {{ car.imageUrl }}
-  </li>
-</ul>
+<div class="container bootstrap snippets bootdey">
+  <h2 class="text-primary title mt-2">
+    <span class="glyphicon glyphicon-align-justify"></span>Car list
+  </h2>
+  <div class="col-lg-12">
+    <input
+      type="search"
+      class="form-control"
+      id="input-search"
+      placeholder="Search..."
+    />
+  </div>
+  <div class="row mt-4">
+    <div *ngFor="let car of cars" class="col-4">
+      <div class="info-block block-info">
+        <div>
+          <img src="{{ car.imageUrl }}" class="img-fluid" alt="" />
+        </div>
+
+        <div>
+          <p>Make: {{ car.make }}</p>
+          <p>Model: {{ car.model }}</p>
+          <p>Hp: {{ car.hp }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
