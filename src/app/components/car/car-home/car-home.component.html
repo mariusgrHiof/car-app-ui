@@ -22,6 +22,16 @@
           <p>Model: {{ car.model }}</p>
           <p>Hp: {{ car.hp }}</p>
         </div>
+        <div class="d-flex justify-content-center gap-2">
+          <button
+            class="btn btn-primary"
+            type="button"
+            routerLink="/edit/{{ car.id }}"
+          >
+            Edit
+          </button>
+          <button class="btn btn-danger" type="button">Delete</button>
+        </div>
       </div>
     </div>
   </div>
