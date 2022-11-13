@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/nav/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AddCarComponent } from './components/car/add-car/add-car.component';
-import { EditCarComponent } from './components/car/edit-car/edit-car.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -17,9 +16,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     CarHomeComponent,
     NavbarComponent,
-
     AddCarComponent,
-    EditCarComponent,
   ],
   imports: [
     BrowserModule,

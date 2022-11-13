@@ -11,6 +11,10 @@ export class CarService {
   constructor(private http: HttpClient) {}
 
   getCars() {
-    return this.http.get<Car[]>(`${this.baseUrl}/all`);
+    return this.http.get<Car[]>(`${this.baseUrl}/car/all`);
+  }
+
+  addCar(car: Car) {
+    return this.http.post<Car>(`${this.baseUrl}/car/add`, car);
   }
 }

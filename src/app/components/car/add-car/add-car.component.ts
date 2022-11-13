@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Car } from 'src/app/models/car';
@@ -21,12 +22,12 @@ export class AddCarComponent implements OnInit {
 
   addCar() {
     this.carService.addCar(this.car).subscribe({
-      next: (car) => {
+      next: (car: Car) => {
         this.car = car;
         this.router.navigate(['']);
       },
-      error: (error) => {
-        console.log(error);
+      error: (error: HttpErrorResponse) => {
+        console.log(error.message);
       },
     });
   }
