@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/nav/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AddCarComponent } from './components/car/add-car/add-car.component';
 import { FormsModule } from '@angular/forms';
+import { EditCarComponent } from './components/car/edit-car/edit-car.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     CarHomeComponent,
     NavbarComponent,
     AddCarComponent,
+    EditCarComponent,
   ],
   imports: [
     BrowserModule,

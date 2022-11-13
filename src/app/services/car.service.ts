@@ -17,4 +17,12 @@ export class CarService {
   addCar(car: Car) {
     return this.http.post<Car>(`${this.baseUrl}/car/add`, car);
   }
+
+  editCar(id: Number, car: Car) {
+    return this.http.put<Car>(`${this.baseUrl}/car/update/${id}`, car);
+  }
+
+  getCarById(id: Number) {
+    return this.http.get<Car>(`${this.baseUrl}/car/find/${id}`);
+  }
 }

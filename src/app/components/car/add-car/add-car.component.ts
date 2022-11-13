@@ -11,6 +11,7 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class AddCarComponent implements OnInit {
   car: Car = {
+    id: 0,
     make: '',
     model: '',
     hp: 0,
