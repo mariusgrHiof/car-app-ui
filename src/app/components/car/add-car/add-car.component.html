@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row mt-4 justify-content-center">
+    <div class="col-4">
+      <form #addForm="ngForm" (ngSubmit)="addCar()" autocomplete="off">
+        <div class="mb-3">
+          <label for="make" class="form-label">Make</label>
+          <input
+            name="make"
+            type="text"
+            class="form-control"
+            [(ngModel)]="car.make"
+            id="make"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="model" class="form-label">Model</label>
+          <input
+            name="model"
+            type="text"
+            class="form-control"
+            [(ngModel)]="car.model"
+            id="model"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="hp" class="form-label">HP</label>
+          <input
+            name="hp"
+            type="number"
+            class="form-control"
+            [(ngModel)]="car.hp"
+            id="hp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="imageUrl" class="form-label">ImageUrl</label>
+          <input
+            name="imageUrl"
+            type="text"
+            class="form-control"
+            [(ngModel)]="car.imageUrl"
+            id="imageUrl"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
