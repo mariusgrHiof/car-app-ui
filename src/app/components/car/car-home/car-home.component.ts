@@ -11,6 +11,8 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class CarHomeComponent implements OnInit {
   cars: Car[] = [];
+  filterCars: Car[] = [];
+  searchValue: string = '';
 
   constructor(private carService: CarService, private router: Router) {}
 
@@ -22,6 +24,7 @@ export class CarHomeComponent implements OnInit {
     this.carService.getCars().subscribe({
       next: (cars) => {
         this.cars = cars;
+        this.filterCars = cars;
       },
       error: (error: HttpErrorResponse) => {
         console.log(error.message);
@@ -40,5 +43,14 @@ export class CarHomeComponent implements OnInit {
         },
       });
     }
+  }
+
+  searchCar(newValue: string) {
+    this.filterCars = this.cars.filter((car) => {
+      return (
+        car.make.toLowerCase().includes(newValue.toLowerCase()) ||
+        car.model.toLowerCase().includes(newValue.toLowerCase())
+      );
+    });
   }
 }
