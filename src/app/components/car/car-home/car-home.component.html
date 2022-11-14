@@ -14,15 +14,17 @@
     <div *ngFor="let car of cars" class="col-4">
       <div class="info-block block-info">
         <div>
-          <img src="{{ car.imageUrl }}" class="img-fluid" alt="" />
+          <div class="img-wrapper">
+            <img src="{{ car.imageUrl }}" alt="" />
+          </div>
+          <div class="d-flex flex-column mt-2">
+            <p>Make: {{ car.make }}</p>
+            <p>Model: {{ car.model }}</p>
+            <p>Hp: {{ car.hp }}</p>
+          </div>
         </div>
 
-        <div>
-          <p>Make: {{ car.make }}</p>
-          <p>Model: {{ car.model }}</p>
-          <p>Hp: {{ car.hp }}</p>
-        </div>
-        <div class="d-flex justify-content-center gap-2">
+        <div class="d-flex gap-2">
           <button
             class="btn btn-primary"
             type="button"
