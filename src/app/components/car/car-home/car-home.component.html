@@ -4,14 +4,17 @@
   </h2>
   <div class="col-lg-12">
     <input
-      type="search"
+      type="text"
       class="form-control"
-      id="input-search"
+      id="searchValue"
+      name="searchValue"
+      (ngModelChange)="searchCar($event)"
+      [(ngModel)]="searchValue"
       placeholder="Search..."
     />
   </div>
-  <div class="row mt-4" *ngIf="cars.length > 0">
-    <div *ngFor="let car of cars" class="col-4">
+  <div class="row mt-4" *ngIf="filterCars.length > 0">
+    <div *ngFor="let car of filterCars" class="col-4">
       <div class="info-block block-info">
         <div>
           <div class="img-wrapper">
